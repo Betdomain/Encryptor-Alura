@@ -8,18 +8,29 @@
 </head>
 <body>
     <header>
-    <!-- img src="img/LogoBet.png" alt="Betdomain" -->
-    </header>
 
-    <main>
-    <input  class="mainText" type="text" id="inputTextMain" placeholder="Ingrese texto aquí">
+    <img class="logoMain" src="img/LogoBet.png" alt="Betdomain" >
+    </header>
     <br>
-    <button id="encryptButton">Encriptar</button>
-    <button id="decryptButton">Desencriptar</button>
+    <main class="mainBody">
+        <section class="text_Button_Box">
+    <input class="mainText" type="text" id="inputTextMain" placeholder="Ingrese texto aquí">
+    
+    <h6 class="text_warning"><img class="warning" src="./img/warning-exclamation-point.png" alt="">Solo letras minusculas y sin acentos</h6>
+    <div class="app__buttons">
+    <button onclick="encryptMessage();" class="encrypt_button" id="encryptButton">Encriptar</button>
+    <button onclick="decryptMessage();" class="decrypt_button" id="decryptButton">Desencriptar</button>
+    </div>
+    </section>
     <br>
-    <textarea id="resultText" rows="4" cols="50" placeholder="Ningún mensaje fue encontrado"></textarea>
-    <h6>Solo letras minusculas y sin acentos</h6>
-    <button id="showResults">Copiar</button>
+
+    <section class="result_Button_Box">
+    <textarea class="result_Box" id="resultText" type="text" placeholder="Ningún mensaje fue encontrado"></textarea>
+    <br>
+    <div align="center">
+    <button onclick="copy();" class="encrypt_button" id="showResults">Copiar</button>
+    </section>
+    </div>
     </main>
     
 <script src="app.js"></script>

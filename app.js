@@ -1,7 +1,15 @@
+function getInput(){
+    let userSentence = document.getElementById('inputTextMain').value;
+    let arraySplit = userSentence.split('');
+    return;
+}
 
-let userSentence = "Esta es una frase de prueba";
-let arraySplit = userSentence.split('');
 
+
+function encryptMessage(){
+        
+    let userSentence = document.getElementById('inputTextMain').value;
+    let arraySplit = userSentence.split('');
 
 for (let i = 0; i < arraySplit.length; i++){
     if (arraySplit[i] == 'e'){
@@ -21,10 +29,16 @@ for (let i = 0; i < arraySplit.length; i++){
     }
 
 }
-
 let arrayEncrypted = arraySplit.join("");
+document.getElementById('resultText').value = arrayEncrypted;
 
 console.log(arrayEncrypted);
+}
+
+
+function decryptMessage(){
+let userSentence = document.getElementById('inputTextMain').value;
+let arrayEncrypted= userSentence;
 
 arrayEncrypted = arrayEncrypted.replace(/enter/g, "e");
 arrayEncrypted = arrayEncrypted.replace(/imes/g, "i");
@@ -32,5 +46,18 @@ arrayEncrypted = arrayEncrypted.replace(/ai/g, "a");
 arrayEncrypted = arrayEncrypted.replace(/ober/g, "o");
 arrayEncrypted = arrayEncrypted.replace(/ufat/g, "u");
 
+document.getElementById('resultText').value = arrayEncrypted;
+
+
+
 console.log(arrayEncrypted);
+}
+
+function copy() {
+    var textarea = document.getElementById("resultText");
+    textarea.select();
+    navigator.clipboard.writeText(textarea.value);
+    alert("el mensaje ha sido copiado");
+    
+  }
 
